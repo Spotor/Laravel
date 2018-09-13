@@ -13,4 +13,9 @@ class Pagamento extends Model
     ];
 
     protected $table = 'pagamentos';
+
+    public function pessoa ()
+    {
+        return $this->belongsTo(Pessoa::class, 'pessoa_id');
+    }
 }

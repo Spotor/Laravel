@@ -13,4 +13,10 @@ class Pessoa extends Model
     ];
 
     protected $table = 'pessoas';
+
+    public function pagamento ()
+    {
+        return $this->hasOne(Pagamento::class, 'pessoa_id');
+    }
+
 }
