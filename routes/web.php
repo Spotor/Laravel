@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'pessoas'], function () {
+    Route::get('/', 'PessoaController@indexp');
+});
+
+Route::group(['prefix' => 'contas'], function () {
+    Route::get('/', 'ContaController@indexc');
+});
