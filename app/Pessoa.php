@@ -16,7 +16,7 @@ class Pessoa extends Model
 
     public function pagamento ()
     {
-        return $this->hasOne(Pagamento::class, 'pessoa_id');
+        return $this->hasMany(Pagamento::class, 'pessoa_id');
     }
 
 }

@@ -7,10 +7,10 @@
     @foreach($pessoas as $pessoa)
         Nome: {{ $pessoa->nome }} <br>
         CPF: {{ $pessoa->CPF }} <br>
-        Pagamento:
+        Histórico de pagamento:
         @foreach($pessoa->pagamento as $pagamentos)
-            
-        @endforeach
+            <br>{{$pagamentos->salario}}
+        @endforeach 
     @endforeach 
 </body>
 </html>
